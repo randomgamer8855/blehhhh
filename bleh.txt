@@ -1,22 +1,22 @@
 -- Define the args
-local args = {
-    [1] = {
-        [1] = {
-            [1] = 1;
-            [2] = "A";
-        };
-        [2] = "";
-    };
-}
-
--- Define a function to send the request
-local function sendRequest()
-    -- Wait for the ReplicatedStorage service and the necessary remote event
-    game:GetService("ReplicatedStorage"):WaitForChild("bridgeNet2", 9e9):WaitForChild("dataRemoteEvent", 9e9):FireServer(unpack(args))
-end
-
--- Run the sendRequest function every 3 seconds
-while true do
-    sendRequest()
-    wait(3)  -- Wait for 3 seconds before running again
-end
+ local args = {
+     [1] = {
+         [1] = {
+             [1] = 1;
+             [2] = "A";
+         };
+         [2] = "";
+     };
+ }
+ 
+ -- Define a function to send the request
+ local function sendRequest()
+     -- Wait for the ReplicatedStorage service and the necessary remote event
+     game:GetService("ReplicatedStorage"):WaitForChild("bridgeNet2", 9e9):WaitForChild("dataRemoteEvent", 9e9):FireServer(unpack(args))
+ end
+ 
+ -- Run the sendRequest function every 3 seconds
+ while true do
+     sendRequest()
+     wait(3)  -- Wait for 3 seconds before running again
+ end
