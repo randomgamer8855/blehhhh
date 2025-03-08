@@ -33,7 +33,7 @@ Rayfield:Notify({
     Name = "Auto Goal (Cannot Undo)",
     Callback = function()
         _G.AUTO_GOAL = true
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Alipade/Roblox/main/AzureLatch.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/randomgamer8855/blehhhh/refs/heads/main/bleh2%20(cred%20to%20Alipade)"))()
     end,
  })
 
