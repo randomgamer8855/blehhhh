@@ -1,0 +1,47 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Pearl Hub | Azure Latch",
+   LoadingTitle = "Azure Latch V1",
+   LoadingSubtitle = "By Pootyoudoodl",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Example Hub"
+   }
+})
+
+local MainTab = Window:CreateTab("Autos", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+    Title = "You executed the script",
+    Content = "YIPPPEEEEEE",
+    Duration = 5,
+    Image = 13047715178,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Okay!",
+          Callback = function()
+          print("The user tapped Okay!")
+       end
+    },
+ },
+ })
+ 
+ local Button = MainTab:CreateButton({
+    Name = "Auto Goal (Cannot Undo)",
+    Callback = function()
+        _G.AUTO_GOAL = true
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Alipade/Roblox/main/AzureLatch.lua"))()
+    end,
+ })
+
+ local Toggle = MainTab:CreateToggle({
+    Name = "Auto Striker",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/randomgamer8855/blehhhh/refs/heads/main/bleh.txt"))() 
+    end,
+ })
