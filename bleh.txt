@@ -16,7 +16,7 @@ local function sendRequest()
 end
 
 -- Run the sendRequest function every 3 seconds
-while Toggle1 = true do
+while true do
     sendRequest()
     wait(3)  -- Wait for 3 seconds before running again
 end
